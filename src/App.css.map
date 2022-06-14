@@ -1,11 +1,12 @@
 {
     "version": 3,
-    "mappings": "ACAA,AAAA,GAAG,CAAC;EACA,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;CACf",
+    "mappings": "ACAA,AAAA,GAAG,CAAC;EACA,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;CACf;;AGHD,AAAA,GAAG,CAAC;EACA,gBAAgB,EAAE,IAAI;CACzB",
     "sources": [
         "App.scss",
         "sass/_Nav.scss",
         "sass/_Sidebar.scss",
-        "sass/_Dashboard.scss"
+        "sass/_Dashboard.scss",
+        "sass/_ChartOne.scss"
     ],
     "names": [],
     "file": "App.css"

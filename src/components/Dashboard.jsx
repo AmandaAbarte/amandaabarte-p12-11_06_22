@@ -1,4 +1,5 @@
 import React from "react";
+import ChartOne from "./ChartOne";
 
 export default function Dashboard() {
     return (
@@ -8,7 +9,7 @@ export default function Dashboard() {
                 <p>congrats message</p>
             </div>
             <div className="activity-container">
-                chart <br/> chart <br/> chart
+                <ChartOne/>
             </div>
         </main>
     )

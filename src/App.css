@@ -9,8 +9,7 @@ nav {
   background-color: black;
   height: 90px;
   color: white;
-  padding: 2%;
-  padding-right: 4%;
+  padding: 0% 4% 0 2%;
   display: flex;
 }
 
@@ -29,6 +28,39 @@ nav ul li {
   font-size: 24px;
   line-height: 24px;
   list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .sidebar {
+  border: black 2px solid;
+  background-color: black;
+  color: white;
+  width: 115px;
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 0;
+}
+
+.container .sidebar .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.container .sidebar p {
+  margin-top: 40px;
+  transform: rotate(-90deg);
 }
 
 svg {

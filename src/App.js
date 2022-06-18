@@ -1,32 +1,30 @@
-
-import './App.css';
-import Nav from './components/Nav';
-import SideBar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
-import api from './api/posts';
-import { useEffect, useState } from 'react';
+import "./App.css";
+import Nav from "./components/Nav";
+import SideBar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard";
+import axios from "axios";
+import api from "./api/posts";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router,Route, Routes, useParams } from "react-router-dom";
 
 function App() {
-  const [user, setUser] = useState([]);
-  useEffect(()=> {
-    const fetchUsers = async () => {
-      try {
-        const response = await api.get('/12');
-        setUser(response.data);
-      } catch (err) {
-        //not in the 200 response range
-      }
-    }
-    fetchUsers();
-  }, [])
+  
+const {userID} = useParams();
+  // {userData.data.id}
   return (
     <div className="App">
-      <Nav/>
-      <div className='container'>
-
-      <SideBar/>
-      <Dashboard user={user}/>
-      </div>
+      <Router>
+        <Nav />
+        <div className="container">
+          <SideBar />
+          <Routes>
+            <Route path="user" >
+              <Route path=":userID" element={<Dashboard />}/>
+            </Route>
+          </Routes>
+          {/* <Dashboard /> */}
+        </div>
+      </Router>
     </div>
   );
 }

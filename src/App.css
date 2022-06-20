@@ -40,7 +40,7 @@ nav ul li {
   border: black 2px solid;
   background-color: black;
   color: white;
-  width: 115px;
+  width: 10%;
   height: 950px;
   display: flex;
   flex-direction: column;
@@ -67,8 +67,8 @@ nav ul li {
 main {
   display: flex;
   flex-direction: column;
-  margin: 5% 10%;
-  width: 65%;
+  margin: 5% 10% 0 0;
+  width: 75%;
   box-sizing: border-box;
 }
 
@@ -112,7 +112,21 @@ svg {
   overflow: visible;
 }
 
-.linechart {
-  background-color: #FF0000;
+.small-chart-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.small-chart-container .linechart-container {
+  margin-right: 1%;
+}
+
+.small-chart-container .linechart-container .linechart {
+  background-color: #ff0000;
+}
+
+.small-chart-container .radar-chart {
+  margin-right: 1%;
+  background-color: #282d30;
 }
 /*# sourceMappingURL=App.css.map */

@@ -4,7 +4,7 @@ import { select, line, curveCardinal, axisBottom, scaleLinear, index } from "d3"
 
 export default function AverageSessions(props) {
   const [userSessions, setUserSessions] = useState("");
-  const days = ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"]
+  const days = ["M","T","W","Th","F","S","Sn"]
 
   const allSessions = userSessions && userSessions.sessions;
   //returns session lengths into an array
@@ -47,9 +47,10 @@ export default function AverageSessions(props) {
       .curve(curveCardinal);
     //renders path element and attaches "d" attribute from the line generator
     svg
-      .selectAll("path")
+      .selectAll(".line")
       .data([sessionData])
       .join("path")
+      .attr("class","line")
       .attr("d", (value) => myLine(value))
       .attr("fill", "none")
       .attr("stroke", "white");

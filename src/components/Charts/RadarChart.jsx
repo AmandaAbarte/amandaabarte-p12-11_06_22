@@ -20,4 +20,7 @@ export default function RadarChart(props) {
   useEffect(()=>{
     getUserPerformance();
   },[])
+  return(
+    <svg className="radar-chart"></svg>
+  )
 }

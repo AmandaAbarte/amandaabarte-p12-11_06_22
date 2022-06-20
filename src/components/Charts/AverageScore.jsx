@@ -5,7 +5,8 @@ import { select } from "d3";
 export default function AverageScore(props) {
   return (
     <div>
-        todays score is {props.todayScore}
+        <svg></svg>
+        {/* todays score is {props.todayScore} */}
     </div>
   )
 }

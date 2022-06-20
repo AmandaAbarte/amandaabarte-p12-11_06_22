@@ -1,10 +1,21 @@
-svg{
-    background-color: aquamarine;
-    border-radius: 5px;
-    width: 250px;
-    height: 250px;
-    overflow: visible;
+svg {
+  background-color: aquamarine;
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+  overflow: visible;
 }
-.linechart {
-    background-color: #FF0000;
+.small-chart-container {
+  display: flex;
+  justify-content: space-around;
+  .linechart-container {
+    margin-right: 1%;
+    .linechart {
+      background-color: #ff0000;
+    }
+  }
+  .radar-chart {
+    margin-right: 1%;
+    background-color: #282d30;
+  }
 }

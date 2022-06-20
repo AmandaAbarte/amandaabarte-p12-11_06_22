@@ -17,7 +17,6 @@ export default function DailyActivity(props) {
     allSessions.map((item) => {
       return item.kilogram;
     });
-  console.log(kgData);
   const getUserActivity = () => {
     axios
       .get(`http://localhost:3000/user/${props.userID}/activity`)

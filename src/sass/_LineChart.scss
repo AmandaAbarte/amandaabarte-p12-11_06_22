@@ -9,7 +9,7 @@ svg {
     margin-bottom: 1%;
     .daily-chart {
       width: 100%;
-      background-color: #FBFBFB;
+      background-color: #fbfbfb;
       .kg-bar {
         fill: #282d30;
       }
@@ -24,9 +24,12 @@ svg {
         background-color: #ff0000;
       }
     }
-    .radar-chart {
-      margin-right: 1%;
-      background-color: #282d30;
+    .radar-chart-container {
+        width: 250px;
+      .radar-chart {
+        margin-right: 1%;
+        background-color: #282d30;
+      }
     }
   }
 }

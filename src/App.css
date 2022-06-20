@@ -117,7 +117,7 @@ svg {
 
 .charts-container .daily-chart-container .daily-chart {
   width: 100%;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .charts-container .daily-chart-container .daily-chart .kg-bar {
@@ -137,7 +137,11 @@ svg {
   background-color: #ff0000;
 }
 
-.charts-container .small-chart-container .radar-chart {
+.charts-container .small-chart-container .radar-chart-container {
+  width: 250px;
+}
+
+.charts-container .small-chart-container .radar-chart-container .radar-chart {
   margin-right: 1%;
   background-color: #282d30;
 }

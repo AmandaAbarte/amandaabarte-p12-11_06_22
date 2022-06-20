@@ -5,6 +5,14 @@ svg {
   height: 250px;
   overflow: visible;
 }
+.daily-chart-container{
+    .daily-chart {
+        width: 100%;
+        .kg-bar{
+            fill: #ff0000;
+        }
+    }
+}
 .small-chart-container {
   display: flex;
   justify-content: space-around;

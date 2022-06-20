@@ -112,6 +112,14 @@ svg {
   overflow: visible;
 }
 
+.daily-chart-container .daily-chart {
+  width: 100%;
+}
+
+.daily-chart-container .daily-chart .kg-bar {
+  fill: #ff0000;
+}
+
 .small-chart-container {
   display: flex;
   justify-content: space-around;

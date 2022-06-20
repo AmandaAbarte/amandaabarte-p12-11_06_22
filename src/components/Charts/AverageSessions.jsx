@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
-import { select, line, curveCardinal, axisBottom, scaleLinear, index } from "d3";
+import { select, line, curveCardinal, axisBottom, scaleLinear, scaleBand } from "d3";
 
 export default function AverageSessions(props) {
   const [userSessions, setUserSessions] = useState("");
@@ -34,8 +34,8 @@ export default function AverageSessions(props) {
   //called on loading and when data changes
   useEffect(() => {
     const svg = select(svgRef.current);
-    const xScale = scaleLinear()
-      .domain([0, sessionData.length-1])
+    const xScale = scaleBand()
+      .domain([1,2,3,4,5,6,7])
       .range([0, 250]);
     const yScale = scaleLinear().domain([0, 70]).range([150, 0]);
     const xAxis = axisBottom(xScale).ticks(sessionData.length).tickFormat(index => index +1);

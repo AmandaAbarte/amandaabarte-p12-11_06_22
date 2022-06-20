@@ -33,6 +33,7 @@ nav ul li {
 .container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .container .sidebar {
@@ -61,6 +62,46 @@ nav ul li {
 .container .sidebar p {
   margin-top: 40px;
   transform: rotate(-90deg);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 10%;
+  width: 65%;
+  box-sizing: border-box;
+}
+
+main .user-data {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .user-data .key-data-container {
+  width: 20%;
+}
+
+main .user-data .key-data-container .key-data-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FBFBFB;
+  padding: 5px;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+main .user-data .key-data-container .key-data-card .icon-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: aqua;
 }
 
 svg {

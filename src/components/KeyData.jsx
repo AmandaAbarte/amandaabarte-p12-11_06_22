@@ -1,9 +1,10 @@
 import React from "react";
 
 export default function KeyData(props) {
+
   return (
     <div className="key-data-card">
-      <div className="icon-container">
+      <div className="icon-container" style={props.lable === "Proteins" ?{backgroundColor: "#E9F4FB"} : props.lable === "Calories" ?{backgroundColor:"#FBEAEA"}: props.lable ==="Carbs"? {backgroundColor: "#FBF6E5"}: {backgroundColor:"#fbeaef"}}>
         <img src={props.img}></img>
       </div>
       <div className="info-container">

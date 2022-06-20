@@ -33,17 +33,17 @@ export default function DailyActivity(props) {
   useEffect(() => {
     getUserActivity();
   }, []);
-  const svgRef = useRef();
+  const svgDaily = useRef();
   //called on loading and when data changes
   useEffect(() => {
-    const svg = select(svgRef.current);
+    const svg = select(svgDaily.current);
     const xScale = scaleBand().domain([0, 1, 2, 3, 4, 5, 6]).range([0, 750]).padding(0.8);
     const yScale = scaleLinear().domain([65, 85]).range([150, 0]);
     const xAxis = axisBottom(xScale)
       .ticks(kgData.length)
       .tickFormat((index) => index + 1);
     svg.select(".xaxis").style("transform", "translateY(200px)").call(xAxis);
-    
+
     svg
       .selectAll("bar")
       .data(kgData)
@@ -59,7 +59,7 @@ export default function DailyActivity(props) {
 
   return (
     <div className="daily-chart-container">
-      <svg ref={svgRef} className="daily-chart">
+      <svg ref={svgDaily} className="daily-chart">
         <g className="xaxis" />
       </svg>
     </div>

@@ -3,27 +3,30 @@ svg {
   border-radius: 5px;
   width: 250px;
   height: 250px;
-  overflow: visible;
 }
-.daily-chart-container{
+.charts-container {
+  .daily-chart-container {
+    margin-bottom: 1%;
     .daily-chart {
-        width: 100%;
-        .kg-bar{
-            fill: #ff0000;
-        }
-    }
-}
-.small-chart-container {
-  display: flex;
-  justify-content: space-around;
-  .linechart-container {
-    margin-right: 1%;
-    .linechart {
-      background-color: #ff0000;
+      width: 100%;
+      background-color: #FBFBFB;
+      .kg-bar {
+        fill: #282d30;
+      }
     }
   }
-  .radar-chart {
-    margin-right: 1%;
-    background-color: #282d30;
+  .small-chart-container {
+    display: flex;
+    justify-content: space-between;
+    .linechart-container {
+      margin-right: 1%;
+      .linechart {
+        background-color: #ff0000;
+      }
+    }
+    .radar-chart {
+      margin-right: 1%;
+      background-color: #282d30;
+    }
   }
 }

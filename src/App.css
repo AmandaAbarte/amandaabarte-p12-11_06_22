@@ -109,31 +109,35 @@ svg {
   border-radius: 5px;
   width: 250px;
   height: 250px;
-  overflow: visible;
 }
 
-.daily-chart-container .daily-chart {
+.charts-container .daily-chart-container {
+  margin-bottom: 1%;
+}
+
+.charts-container .daily-chart-container .daily-chart {
   width: 100%;
+  background-color: #FBFBFB;
 }
 
-.daily-chart-container .daily-chart .kg-bar {
-  fill: #ff0000;
+.charts-container .daily-chart-container .daily-chart .kg-bar {
+  fill: #282d30;
 }
 
-.small-chart-container {
+.charts-container .small-chart-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.small-chart-container .linechart-container {
+.charts-container .small-chart-container .linechart-container {
   margin-right: 1%;
 }
 
-.small-chart-container .linechart-container .linechart {
+.charts-container .small-chart-container .linechart-container .linechart {
   background-color: #ff0000;
 }
 
-.small-chart-container .radar-chart {
+.charts-container .small-chart-container .radar-chart {
   margin-right: 1%;
   background-color: #282d30;
 }

@@ -34,8 +34,8 @@ export default function AverageSessions(props) {
   //called on loading and when data changes
   useEffect(() => {
     const svg = select(svgRef.current);
-    const xScale = scaleBand()
-      .domain([1,2,3,4,5,6,7])
+    const xScale = scaleLinear()
+      .domain([0, sessionData.length-1])
       .range([0, 250]);
     const yScale = scaleLinear().domain([0, 70]).range([150, 0]);
     const xAxis = axisBottom(xScale).ticks(sessionData.length).tickFormat(index => index +1);

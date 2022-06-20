@@ -106,6 +106,10 @@ main .user-data .key-data-container .key-data-card .icon-container {
 
 svg {
   background-color: aquamarine;
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+  overflow: visible;
 }
 
 .linechart {

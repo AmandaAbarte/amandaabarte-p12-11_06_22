@@ -1,13 +1,13 @@
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { select } from "d3";
+import DailyActivity from "./Charts/DailyActivity";
 
 export default function ChartOne() {
-
-    const svgRef = useRef();
-    useEffect(()=> {
-        const svg = select(svgRef.current);
-    },[])
-    return (
-        <svg ref={svgRef}></svg>
-    )
+  
+  return (
+    <div className="charts-container">
+        <DailyActivity />
+      
+    </div>
+  );
 }

@@ -15,7 +15,6 @@ export default function Dashboard() {
   const [userData, setUserData] = useState("");
   const { userID } = useParams();
 
- 
   //makes two calls and sets user data and user performance state
   const getUserData = () => {
     axios
@@ -32,9 +31,6 @@ export default function Dashboard() {
 //calls to api are made only once when page is loaded
   useEffect(() => {
     getUserData();
-    // getUserPerformance();
-    // getUserActivity();
-    // getUserSessions();
   }, []);
 
   //extract more concise data from api data

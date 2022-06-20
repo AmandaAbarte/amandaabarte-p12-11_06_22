@@ -105,6 +105,10 @@ main .user-data .key-data-container .key-data-card .icon-container {
 }
 
 svg {
-  background-color: aqua;
+  background-color: aquamarine;
+}
+
+.linechart {
+  background-color: #FF0000;
 }
 /*# sourceMappingURL=App.css.map */

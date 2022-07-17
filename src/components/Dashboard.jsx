@@ -40,8 +40,8 @@ export default function Dashboard() {
   return (
     <main>
       <div className="welcome">
-        <h1>Hello {firstName}</h1>
-        <p>congrats message</p>
+        <h1>Hello <span className="name">{firstName}</span></h1>
+        <p>Congratulations on reaching yesterday's Goal!</p>
       </div>
       <div className="user-data">
         <Charts userID={userID} todayScore={userData.todayScore}/>

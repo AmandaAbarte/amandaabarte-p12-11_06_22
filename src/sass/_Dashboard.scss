@@ -4,6 +4,11 @@ main {
     margin: 5% 10% 0 0;
     width: 75%;
     box-sizing: border-box;
+    .welcome{
+        .name{
+            color: #ff0000;
+        }
+    }
     .user-data {
         margin-top: 5%;
         display: flex;

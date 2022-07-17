@@ -8,20 +8,13 @@ import {
 } from "recharts";
 
 export default function AverageScore(props) {
-  // const [todayData, setTodayData] = useState(props.todayScore);
-  console.log(props.todayScore * 100);
+  //todays score data 
   const data = [
     {
       value: props.todayScore,
       fill: "#FF0000",
     },
   ];
-  const style = {
-    top: "50%",
-    right: 0,
-    transform: "translate(0, -50%)",
-    lineHeight: "24px",
-  };
   return (
     <div className="progress-chart-container">
       <ResponsiveContainer

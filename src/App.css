@@ -72,6 +72,10 @@ main {
   box-sizing: border-box;
 }
 
+main .welcome .name {
+  color: #ff0000;
+}
+
 main .user-data {
   margin-top: 5%;
   display: flex;
@@ -105,7 +109,7 @@ main .user-data .key-data-container .key-data-card .icon-container {
 }
 
 svg {
-  background-color: aquamarine;
+  background-color: #282D30;
   border-radius: 5px;
   width: 250px;
   height: 250px;

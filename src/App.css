@@ -111,6 +111,10 @@ svg {
   height: 250px;
 }
 
+.charts-container {
+  width: 75%;
+}
+
 .charts-container .daily-chart-container {
   margin-bottom: 1%;
 }
@@ -127,10 +131,12 @@ svg {
 .charts-container .small-chart-container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .charts-container .small-chart-container .linechart-container {
   margin-right: 1%;
+  width: 33%;
 }
 
 .charts-container .small-chart-container .linechart-container .linechart {
@@ -138,11 +144,17 @@ svg {
 }
 
 .charts-container .small-chart-container .radar-chart-container {
-  width: 250px;
+  width: 33%;
 }
 
 .charts-container .small-chart-container .radar-chart-container .radar-chart {
   margin-right: 1%;
   background-color: #282d30;
+}
+
+.charts-container .small-chart-container .progress-chart-container {
+  background-color: #282d30;
+  height: 250px;
+  width: 33%;
 }
 /*# sourceMappingURL=App.css.map */

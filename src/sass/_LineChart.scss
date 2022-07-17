@@ -5,6 +5,7 @@ svg {
   height: 250px;
 }
 .charts-container {
+  width: 75%;
   .daily-chart-container {
     margin-bottom: 1%;
     .daily-chart {
@@ -18,18 +19,26 @@ svg {
   .small-chart-container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     .linechart-container {
       margin-right: 1%;
+      width: 33%;
       .linechart {
         background-color: #ff0000;
       }
     }
     .radar-chart-container {
-        width: 250px;
+        // width: 250px;
+        width: 33%;
       .radar-chart {
         margin-right: 1%;
         background-color: #282d30;
       }
+    }
+    .progress-chart-container {
+      background-color: #282d30;
+      height: 250px;
+      width: 33%;
     }
   }
 }

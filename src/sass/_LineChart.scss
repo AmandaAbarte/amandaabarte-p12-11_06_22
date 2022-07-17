@@ -36,9 +36,42 @@ svg {
       }
     }
     .progress-chart-container {
-      background-color: #282d30;
       height: 250px;
       width: 33%;
+      position: relative;
+      .progress-title{
+        position: absolute;
+        left: 10%;
+        top: 7%;
+    
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+    
+        color: #20253A;
+      }
+      .progress-lable{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-family: "Roboto";
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #282D30;
+      }
+      .progress-chart{
+        .recharts-wrapper{
+          svg {
+            background-color: #FBFBFB;
+          }
+        }
+      }
     }
   }
 }

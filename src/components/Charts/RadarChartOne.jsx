@@ -27,23 +27,19 @@ export default function RadarChartOne(props) {
         //   return key
         // })
         const label = Object.values(response.data.data.kind);
-        console.log(label);
         setUserPerformance(
           //
           // [response.data.data.data, [response.data.data.kind]]
           { labels: label, data: data }
         );
-        console.log("data", userPerformance.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
-  console.log(userPerformance);
   useEffect(() => {
     getUserPerformance();
   }, []);
-  const performance = userPerformance && userPerformance.data;
 
   function sortArray(arrayData, arrayLegend){
     let result = [];
@@ -64,8 +60,8 @@ let data = sortArray(userPerformance.data, userPerformance.labels);
           <Radar
             name="userPerformance"
             dataKey="data"
-            stroke={"red"}
-            fill={"green"}
+            stroke="red"
+            fill="red"
             fillOpacity={0.7}
           />
         </RadarChart>

@@ -7,7 +7,18 @@ export default function DailyActivity(props) {
   //api call to get daily user activity and set data in state
   const [userActivity, setUserActivity] = useState("");
   const allSessions = userActivity && userActivity.sessions;
-  console.log(allSessions);
+  const getUserActivity = () => {
+    axios
+      .get(`http://localhost:3000/user/${props.userID}/activity`)
+  
+      .then((response) => {
+        // console.log(response.data.data);
+        setUserActivity(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   function sortArray(arrayData){
     let result = [];
     for(let i = 0; i<arrayData.length; i++){
@@ -17,30 +28,6 @@ export default function DailyActivity(props) {
 }
 
 let data = sortArray(allSessions);
-console.log("data",data);
-  //returns session data into sepparate arrays
-  // const calorieData =
-  //   allSessions &&
-  //   allSessions.map((item) => {
-  //     return item.calories;
-  //   });
-  // const kgData =
-  //   allSessions &&
-  //   allSessions.map((item) => {
-  //     return item.kilogram;
-  //   });
-  const getUserActivity = () => {
-    axios
-      .get(`http://localhost:3000/user/${props.userID}/activity`)
-
-      .then((response) => {
-        // console.log(response.data.data);
-        setUserActivity(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
   useEffect(() => {
     getUserActivity();
   }, []);

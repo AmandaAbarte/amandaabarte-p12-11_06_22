@@ -132,6 +132,11 @@ svg {
   fill: #282d30;
 }
 
+.charts-container .daily-chart-container svg {
+  margin-top: 10px;
+  margin-left: -25px;
+}
+
 .charts-container .small-chart-container {
   display: flex;
   justify-content: space-between;

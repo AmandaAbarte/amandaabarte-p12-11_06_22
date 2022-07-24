@@ -10,36 +10,7 @@ import {
 } from "recharts";
 
 export default function RadarChartOne(props) {
-  const [userPerformance, setUserPerformance] = useState({
-    labels: [],
-    data: [],
-  });
-  //axios call to api to get data
-  const getUserPerformance = () => {
-    axios
-      .get(`http://localhost:3000/user/${props.userID}/performance`)
-
-      .then((response) => {
-        const data = response.data.data.data.map((data) => {
-          return data.value;
-        });
-        // const data = Object.keys(response.data.data.kind).map(key => {
-        //   return key
-        // })
-        const label = Object.values(response.data.data.kind);
-        setUserPerformance(
-          //
-          // [response.data.data.data, [response.data.data.kind]]
-          { labels: label, data: data }
-        );
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  useEffect(() => {
-    getUserPerformance();
-  }, []);
+  
 
   function sortArray(arrayData, arrayLegend){
     let result = [];
@@ -49,7 +20,7 @@ export default function RadarChartOne(props) {
     return result;
 }
 
-let data = sortArray(userPerformance.data, userPerformance.labels);
+let data = sortArray(props.data.data, props.data.kind);
   return (
     // <ResponsiveContainer width="250px" height="250px">
     <div className="radar-chart-container">

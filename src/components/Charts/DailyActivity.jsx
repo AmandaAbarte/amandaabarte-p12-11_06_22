@@ -1,24 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
-import axios from "axios";
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 export default function DailyActivity(props) {
-  //api call to get daily user activity and set data in state
-  const [userActivity, setUserActivity] = useState("");
-  const allSessions = userActivity && userActivity.sessions;
-  const getUserActivity = () => {
-    axios
-      .get(`http://localhost:3000/user/${props.userID}/activity`)
-  
-      .then((response) => {
-        // console.log(response.data.data);
-        setUserActivity(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+ 
   function sortArray(arrayData){
     let result = [];
     for(let i = 0; i<arrayData.length; i++){
@@ -27,10 +12,8 @@ export default function DailyActivity(props) {
     return result;
 }
 
-let data = sortArray(allSessions);
-  useEffect(() => {
-    getUserActivity();
-  }, []);
+let data = sortArray(props.data);
+ 
   
   return (
     <div className="daily-chart-container">

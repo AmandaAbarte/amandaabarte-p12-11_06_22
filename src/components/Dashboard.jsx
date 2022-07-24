@@ -11,9 +11,10 @@ import calories from "../assets/calories.png";
 import { DataContext } from "../context/DataContext";
 
 export default function Dashboard() {
+  // gets id from url
   const { id } = useParams();
   const { data, fetchData } = useContext(DataContext);
-  const [info, setInfo] = useState("");
+  const [userInfo, setUserInfo] = useState("");
 
   //calls to api are made only once when page is loaded
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Dashboard() {
   // Check error value and set data if it's ok
   useEffect(() => {
     if (data.error >= 200 && data.error <= 299) {
-      setInfo(data);
+      setUserInfo(data);
       console.log(data);
     } else if (data.error === 404) {
       // navigation("/404");
@@ -33,49 +34,54 @@ export default function Dashboard() {
 
   return (
     <>
-    {
-      info &&
-    <main>
-      <div className="welcome">
-        <h1>
-          Hello{" "}
-          <span className="name">
-            {info.globalInfo.data.userInfos.firstName}
-          </span>
-        </h1>
-        <p>Congratulations on reaching yesterday's Goal!</p>
-      </div>
-      <div className="user-data">
-        <Charts
-          dailyActivity={info.activity.data.sessions}
-          averageSessions={info.averageSessions.data.sessions}
-          performance={info.performance.data}
-          todayScore={info.globalInfo.data.todayScore}
-        />
-        <div className="key-data-container">
-          <KeyData
-            data={info.globalInfo.data.keyData.calorieCount}
-            img={calories}
-            unit="kCal"
-            lable="Calories"
-          />
-          <KeyData
-            data={info.globalInfo.data.keyData.carbohydrateCount}
-            img={carbs}
-            unit="g"
-            lable="Carbs"
-          />
-          <KeyData data={info.globalInfo.data.keyData.lipidCount} img={lipids} unit="g" lable="Lipids" />
-          <KeyData
-            data={info.globalInfo.data.keyData.proteinCount}
-            img={proteins}
-            unit="g"
-            lable="Proteins"
-          />
-        </div>
-      </div>
-    </main>
-    }
+    {/* Renders only if info is set */}
+      {userInfo && (
+        <main>
+          <div className="welcome">
+            <h1>
+              Hello{" "}
+              <span className="name">
+                {userInfo.globalInfo.data.userInfos.firstName}
+              </span>
+            </h1>
+            <p>Congratulations on reaching yesterday's Goal!</p>
+          </div>
+          <div className="user-data">
+            <Charts
+              dailyActivity={userInfo.activity.data.sessions}
+              averageSessions={userInfo.averageSessions.data.sessions}
+              performance={userInfo.performance.data}
+              todayScore={userInfo.globalInfo.data.todayScore}
+            />
+            <div className="key-data-container">
+              <KeyData
+                data={userInfo.globalInfo.data.keyData.calorieCount}
+                img={calories}
+                unit="kCal"
+                lable="Calories"
+              />
+              <KeyData
+                data={userInfo.globalInfo.data.keyData.carbohydrateCount}
+                img={carbs}
+                unit="g"
+                lable="Carbs"
+              />
+              <KeyData
+                data={userInfo.globalInfo.data.keyData.lipidCount}
+                img={lipids}
+                unit="g"
+                lable="Lipids"
+              />
+              <KeyData
+                data={userInfo.globalInfo.data.keyData.proteinCount}
+                img={proteins}
+                unit="g"
+                lable="Proteins"
+              />
+            </div>
+          </div>
+        </main>
+      )}
     </>
   );
 }

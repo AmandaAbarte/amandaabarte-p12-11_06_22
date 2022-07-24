@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -35,6 +35,7 @@ let data = sortArray(props.data);
           <CartesianGrid strokeDasharray="3 2" stroke="#DEDEDE"/>
           <XAxis dataKey="day" stroke="#9B9EAC" />
           <YAxis stroke="#9B9EAC" />
+          {/* <Tooltip content={<CustomTooltip />} cursor={{ fill: '#C4C4C480', strokeWidth: 2 }} /> */}
           <Bar dataKey="kilogram" fill="#282D30" radius={[25,25,0,0]} barSize={7}  />
           <Bar dataKey="calories" fill="#E60000" radius={[25,25,0,0]} barSize={7} />
         </BarChart>

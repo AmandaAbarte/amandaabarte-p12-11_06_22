@@ -7,7 +7,7 @@ export default function DailyActivity(props) {
   function sortArray(arrayData){
     let result = [];
     for(let i = 0; i<arrayData.length; i++){
-        result.push({calories: arrayData[i].calories, kilogram: arrayData[i].kilogram, day: i});
+        result.push({calories: arrayData[i].calories, kilogram: arrayData[i].kilogram, day: i+1});
     }
     return result;
 }
@@ -31,7 +31,7 @@ let data = sortArray(props.data);
             </div>
         </div>
         <ResponsiveContainer width="100%" height="100%" className="daily-chart">
-        <BarChart data={data} margin={{top: 50, left: -10}}>
+        <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 2" stroke="#DEDEDE"/>
           <XAxis dataKey="day" stroke="#9B9EAC" />
           <YAxis stroke="#9B9EAC" />

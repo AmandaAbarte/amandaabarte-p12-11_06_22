@@ -120,6 +120,7 @@ svg {
 .charts-container .daily-chart-container {
   margin-bottom: 1%;
   width: 100%;
+  height: 370px;
 }
 
 .charts-container .daily-chart-container .daily-chart {
@@ -135,11 +136,15 @@ svg {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 100px;
+  overflow: hidden;
 }
 
 .charts-container .small-chart-container .linechart-container {
   margin-right: 1%;
   width: 33%;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .charts-container .small-chart-container .linechart-container .linechart {
@@ -148,6 +153,9 @@ svg {
 
 .charts-container .small-chart-container .radar-chart-container {
   width: 33%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 1%;
 }
 
 .charts-container .small-chart-container .radar-chart-container .radar-chart {
@@ -158,6 +166,8 @@ svg {
 .charts-container .small-chart-container .progress-chart-container {
   height: 250px;
   width: 33%;
+  border-radius: 5px;
+  overflow: hidden;
   position: relative;
 }
 

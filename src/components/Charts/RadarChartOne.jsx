@@ -15,12 +15,13 @@ export default function RadarChartOne(props) {
   function sortArray(arrayData, arrayLegend){
     let result = [];
     for(let i = 0; i<arrayData.length; i++){
-        result.push({data: arrayData[i], type: arrayLegend[i]});
+        result.push({data: arrayData[i].value, type: arrayLegend[i+1]});
     }
     return result;
 }
 
 let data = sortArray(props.data.data, props.data.kind);
+console.log(data);
   return (
     <div className="radar-chart-container">
       <ResponsiveContainer width="100%" height="100%" className="radar-chart">

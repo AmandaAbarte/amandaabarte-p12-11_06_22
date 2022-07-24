@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import DailyActivity from "./Charts/DailyActivity";
 import AverageScore from "./Charts/AverageScore";
 import AverageSessions from "./Charts/AverageSessions";

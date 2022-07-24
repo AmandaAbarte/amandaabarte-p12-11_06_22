@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 
 import {
@@ -22,7 +22,6 @@ export default function RadarChartOne(props) {
 
 let data = sortArray(props.data.data, props.data.kind);
   return (
-    // <ResponsiveContainer width="250px" height="250px">
     <div className="radar-chart-container">
       <ResponsiveContainer width="100%" height="100%" className="radar-chart">
         <RadarChart cx="50%" cy="50%" outerRadius="50%" data={data}>
@@ -38,6 +37,5 @@ let data = sortArray(props.data.data, props.data.kind);
         </RadarChart>
       </ResponsiveContainer>
     </div>
-    // </ResponsiveContainer>
   );
 }

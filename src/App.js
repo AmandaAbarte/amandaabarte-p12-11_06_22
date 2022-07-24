@@ -11,7 +11,6 @@ import {
 
 import { DataProvider } from "./context/DataContext";
 function App() {
-  // {userData.data.id}
   return (
     <div className="App">
       <Router>
@@ -23,7 +22,6 @@ function App() {
               <Route path="user/:id" element={<Dashboard />} />
             </Routes>
           </DataProvider>
-          {/* <Dashboard /> */}
         </div>
       </Router>
     </div>

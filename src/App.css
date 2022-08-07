@@ -230,4 +230,12 @@ svg {
 .charts-container .small-chart-container .progress-chart-container .progress-chart .recharts-wrapper svg {
   background-color: #fbfbfb;
 }
+
+.error-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 10% 20%;
+  align-items: center;
+}
 /*# sourceMappingURL=App.css.map */

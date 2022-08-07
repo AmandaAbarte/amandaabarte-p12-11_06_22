@@ -1,4 +1,5 @@
 import React from "react";
+import Error from "./Error";
 import Charts from "./Charts";
 import KeyData from "./KeyData";
 import { useParams } from "react-router-dom";
@@ -35,7 +36,7 @@ export default function Dashboard() {
   return (
     <>
     {/* Renders only if info is set */}
-      {userInfo && (
+      {userInfo ? (
         <main>
           <div className="welcome">
             <h1>
@@ -81,7 +82,7 @@ export default function Dashboard() {
             </div>
           </div>
         </main>
-      )}
+      ): (<Error/>)}
     </>
   );
 }

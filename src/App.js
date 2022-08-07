@@ -2,6 +2,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import SideBar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
+import Error from "./components/Error";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,7 @@ function App() {
           <SideBar />
           <DataProvider>
             <Routes>
+              <Route path="*" element={<Error />} />
               <Route path="user/:id" element={<Dashboard />} />
             </Routes>
           </DataProvider>

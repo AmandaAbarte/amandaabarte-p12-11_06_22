@@ -6,7 +6,7 @@
         "sass/_Nav.scss",
         "sass/_Sidebar.scss",
         "sass/_Dashboard.scss",
-        "sass/_LineChart.scss"
+        "sass/_Charts.scss"
     ],
     "names": [],
     "file": "App.css"

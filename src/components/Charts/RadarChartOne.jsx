@@ -11,7 +11,12 @@ import {
 
 export default function RadarChartOne(props) {
   
-
+/**
+ * Sort data correctly to generate data for radar chart
+ * @param {array} arrayData data for chart
+ * @param {array} arrayLegend legend for chart
+ * @returns {array} data that corresponds to legend
+ */
   function sortArray(arrayData, arrayLegend){
     let result = [];
     for(let i = 0; i<arrayData.length; i++){

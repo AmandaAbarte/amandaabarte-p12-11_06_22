@@ -11,6 +11,11 @@ import {
 } from "recharts";
 
 export default function DailyActivity(props) {
+  /**
+   * Sort data corretly for daily activity graph
+   * @param {array} arrayData daily activity data
+   * @returns {array} with calories and kg corresponding to each day
+   */
   function sortArray(arrayData) {
     let result = [];
     for (let i = 0; i < arrayData.length; i++) {

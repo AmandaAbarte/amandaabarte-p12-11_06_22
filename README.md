@@ -25,6 +25,6 @@ Accept to run project on localport:3001.
 Currently the only routes available are /user/12 and user/18.
 Other routes will prompt you to those links as no other content is available.
 
-##Documentation
+## Documentation
 
 Documentation is available in the /docs folder

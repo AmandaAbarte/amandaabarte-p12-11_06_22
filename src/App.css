@@ -123,6 +123,32 @@ svg {
   height: 370px;
 }
 
+.charts-container .daily-chart-container .bar-graph-header .bar-graph-legend {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+
+.charts-container .daily-chart-container .bar-graph-header .bar-graph-legend .bar-graph-type {
+  display: flex;
+  align-items: center;
+}
+
+.charts-container .daily-chart-container .bar-graph-header .bar-graph-legend .bar-graph-type .circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.charts-container .daily-chart-container .bar-graph-header .bar-graph-legend .bar-graph-type .circle-red {
+  background-color: #ff0000;
+}
+
+.charts-container .daily-chart-container .bar-graph-header .bar-graph-legend .bar-graph-type .circle-black {
+  background-color: #282d30;
+}
+
 .charts-container .daily-chart-container .daily-chart {
   width: 100%;
   background-color: #fbfbfb;
@@ -180,12 +206,12 @@ svg {
   position: absolute;
   left: 10%;
   top: 7%;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
-  color: #20253A;
+  color: #20253a;
 }
 
 .charts-container .small-chart-container .progress-chart-container .progress-lable {
@@ -198,10 +224,10 @@ svg {
   font-style: normal;
   font-size: 16px;
   line-height: 26px;
-  color: #282D30;
+  color: #282d30;
 }
 
 .charts-container .small-chart-container .progress-chart-container .progress-chart .recharts-wrapper svg {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 /*# sourceMappingURL=App.css.map */

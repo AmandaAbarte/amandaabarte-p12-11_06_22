@@ -6,6 +6,7 @@ import {
   ResponsiveContainer,
   PolarAngleAxis,
 } from "recharts";
+import propTypes from "prop-types";
 
 export default function AverageScore(props) {
   //todays score data 
@@ -44,4 +45,8 @@ export default function AverageScore(props) {
       </p>
     </div>
   );
+}
+
+AverageScore.propTypes = {
+  todayScore: propTypes.number
 }

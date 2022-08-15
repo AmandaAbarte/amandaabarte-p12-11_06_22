@@ -7,7 +7,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useParams,
 } from "react-router-dom";
 
 import { DataProvider } from "./context/DataContext";

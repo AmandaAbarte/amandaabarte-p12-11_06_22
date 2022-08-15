@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export default function DailyActivity(props) {
   /**
@@ -31,7 +31,6 @@ export default function DailyActivity(props) {
   }
 
   let data = sortArray(props.data);
-  console.log(props.data);
 
   return (
     <div className="daily-chart-container">
@@ -72,10 +71,10 @@ export default function DailyActivity(props) {
 }
 
 
-DailyActivity.PropTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    day: PropTypes.string,
-    kilogram: PropTypes.number,
-    calories: PropTypes.number
+DailyActivity.propTypes = {
+  data: propTypes.arrayOf(propTypes.shape({
+    day: propTypes.string,
+    kilogram: propTypes.number,
+    calories: propTypes.number
   }))
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
+import propTypes from "prop-types";
 
 export default function AverageSessions(props) {
   /**
@@ -18,7 +19,6 @@ export default function AverageSessions(props) {
   }
 
   let data = sortArray(props.data);
-
   return (
     <div className="linechart-container">
       <ResponsiveContainer width="100%" height="100%">
@@ -40,4 +40,11 @@ export default function AverageSessions(props) {
       </ResponsiveContainer>
     </div>
   );
+}
+
+AverageSessions.propTypes = {
+  data: propTypes.arrayOf(propTypes.shape({
+    day: propTypes.number,
+    sessionLength: propTypes.number
+  }))
 }

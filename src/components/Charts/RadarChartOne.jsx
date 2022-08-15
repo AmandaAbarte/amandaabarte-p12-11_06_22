@@ -8,6 +8,7 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from "recharts";
+import propTypes from "prop-types";
 
 export default function RadarChartOne(props) {
   
@@ -26,7 +27,6 @@ export default function RadarChartOne(props) {
 }
 
 let data = sortArray(props.data.data, props.data.kind);
-console.log(data);
   return (
     <div className="radar-chart-container">
       <ResponsiveContainer width="100%" height="100%" className="radar-chart">
@@ -44,4 +44,14 @@ console.log(data);
       </ResponsiveContainer>
     </div>
   );
+}
+
+RadarChartOne.propTypes = {
+  data: propTypes.shape({
+    data: propTypes.arrayOf(propTypes.shape({
+      value: propTypes.number,
+      kind: propTypes.number
+    })),
+    kind: propTypes.objectOf(propTypes.string)
+  })
 }

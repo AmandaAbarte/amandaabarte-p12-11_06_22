@@ -154,6 +154,10 @@ svg {
   background-color: #fbfbfb;
 }
 
+.charts-container .daily-chart-container .daily-chart .recharts-wrapper {
+  width: 200%;
+}
+
 .charts-container .daily-chart-container .daily-chart .kg-bar {
   fill: #282d30;
 }
@@ -161,6 +165,7 @@ svg {
 .charts-container .daily-chart-container svg {
   margin-top: 10px;
   margin-left: -25px;
+  width: 100%;
 }
 
 .charts-container .small-chart-container {

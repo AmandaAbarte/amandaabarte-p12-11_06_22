@@ -34,6 +34,9 @@ svg {
     .daily-chart {
       width: 100%;
       background-color: #fbfbfb;
+      .recharts-wrapper{
+        width: 200%;
+      }
       .kg-bar {
         fill: #282d30;
       }
@@ -41,6 +44,7 @@ svg {
     svg {
       margin-top: 10px;
       margin-left: -25px;
+      width: 100%;
     }
   }
   .small-chart-container {

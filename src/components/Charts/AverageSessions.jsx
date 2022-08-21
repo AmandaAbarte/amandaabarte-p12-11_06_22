@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, ResponsiveContainer } from "recharts";
 import propTypes from "prop-types";
 
 export default function AverageSessions(props) {

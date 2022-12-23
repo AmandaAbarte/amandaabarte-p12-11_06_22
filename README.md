@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Prerequisites
-NodeJS (version 12.18)
+[NodeJS (**version 12.18**)](https://nodejs.org/en/)
 
 ## Micro API
 
